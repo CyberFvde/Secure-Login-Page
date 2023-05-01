@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="loginForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <span id="passwordStrength"></span>
+        
+        <div id="captchaContainer"></div>
+        
+        <button type="button" id="mfaButton">Send MFA Code</button>
+        <label for="mfaCode">MFA Code:</label>
+        <input type="text" id="mfaCode" required>
+        
+        <button type="submit">Login</button>
+    </form>
+    <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
+    <script src="main.ts"></script>
+</body>
+</html>
